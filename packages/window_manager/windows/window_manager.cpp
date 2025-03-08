@@ -589,7 +589,7 @@ void WindowManager::SetFullScreen(const flutter::EncodableMap& args) {
   g_is_window_fullscreen = isFullScreen;
 
   if (isFullScreen) {  // Set to fullscreen
-    ::SendMessage(mainWindow, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+  // ::SendMessage(mainWindow, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
     if (!is_frameless_) {
       auto monitor = MONITORINFO{};
       auto placement = WINDOWPLACEMENT{};
